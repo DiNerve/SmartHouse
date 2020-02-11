@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -92,9 +92,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://macbury.github.io/SmartHouse" title="MacBury Smart House" class="md-header-nav__button md-logo">
+        <a href="https://macbury.github.io/SmartHouse" title="MacBury Smart House" aria-label="MacBury Smart House" class="md-header-nav__button md-logo">
           
-            <img src="../../logo.svg" width="24" height="24">
+            <img alt="logo" src="../../logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -186,7 +186,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://macbury.github.io/SmartHouse" title="MacBury Smart House" class="md-nav__button md-logo">
       
-        <img src="../../logo.svg" width="48" height="48">
+        <img alt="logo" src="../../logo.svg" width="48" height="48">
       
     </a>
     MacBury Smart House
@@ -650,7 +650,7 @@
                 
                 <p>Most of services used by my Smart House resides inside <a href="https://www.docker.com/">docker</a> containers. Thanks to that I can get about 90% similar setup on my dev machine.</p>
 <p>Configuring of the dev environment starts from copying all <code>.env.example</code> files and filling them with credentials and configurations:</p>
-<div class="codehilite"><pre><span></span>cp .env.crontab.example .env.crontab
+<div class="codehilite"><pre><span></span><code>cp .env.crontab.example .env.crontab
 cp .env.grafana.example .env.grafana
 cp .env.influxdb.example .env.influxdb
 cp .env.pihole.example .env.pihole
@@ -658,32 +658,32 @@ cp .env.postgresql.example .env.postgresql
 cp .env.nextcloud.example .env.nextcloud
 cp .env.plex.example .env.plex
 cp .env.home-assistant.example .env.home-assistant
-</pre></div>
+</code></pre></div>
 
 
 <p>Next there are few files used by docker that needs to be created(docker would create a folder for that not a file)</p>
-<div class="codehilite"><pre><span></span>mkdir -p .docker/data/mosquitto
+<div class="codehilite"><pre><span></span><code>mkdir -p .docker/data/mosquitto
 mkdir -p .docker/log
 
 touch .docker/data/mosquitto/users.db
 touch .docker/log/fail2ban.log
 touch .docker/log/mosquitto.log
-</pre></div>
+</code></pre></div>
 
 
 <p>And finally some python dependencies:</p>
-<div class="codehilite"><pre><span></span>sudo pip3 install -r requirements.txt
-</pre></div>
+<div class="codehilite"><pre><span></span><code>sudo pip3 install -r requirements.txt
+</code></pre></div>
 
 
 <p>Now we can Rock &amp; Roll. There are two dev commands, the first one is <code>dev</code> that bootups all containers:</p>
-<div class="codehilite"><pre><span></span><span class="nv">SMART_HOUSE_DIR</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> bin/smart-house dev
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nv">SMART_HOUSE_DIR</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> bin/smart-house dev
+</code></pre></div>
 
 
 <p>And here is simple command that watches directory with lovelace configuration, and regenerates all configuration on change:</p>
-<div class="codehilite"><pre><span></span><span class="nv">SMART_HOUSE_DIR</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> bin/smart-house lovelace-dev
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nv">SMART_HOUSE_DIR</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span> bin/smart-house lovelace-dev
+</code></pre></div>
                 
                   
                 
@@ -762,22 +762,22 @@ touch .docker/log/mosquitto.log
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="http://macbury.ninja" class="md-footer-social__link fa fa-globe"></a>
+      <a href="http://macbury.ninja" target="_blank" rel="noopener" title="globe" class="md-footer-social__link fa fa-globe"></a>
     
-      <a href="https://github.com/macbury/SmartHouse/" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/macbury/SmartHouse/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/macbury" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/macbury" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://www.linkedin.com/in/arkadiusz-buras-83041810/" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/arkadiusz-buras-83041810/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 
@@ -787,7 +787,7 @@ touch .docker/log/mosquitto.log
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

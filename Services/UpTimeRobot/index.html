@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -92,9 +92,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://macbury.github.io/SmartHouse" title="MacBury Smart House" class="md-header-nav__button md-logo">
+        <a href="https://macbury.github.io/SmartHouse" title="MacBury Smart House" aria-label="MacBury Smart House" class="md-header-nav__button md-logo">
           
-            <img src="../../logo.svg" width="24" height="24">
+            <img alt="logo" src="../../logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -186,7 +186,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://macbury.github.io/SmartHouse" title="MacBury Smart House" class="md-nav__button md-logo">
       
-        <img src="../../logo.svg" width="48" height="48">
+        <img alt="logo" src="../../logo.svg" width="48" height="48">
       
     </a>
     MacBury Smart House
@@ -652,13 +652,13 @@
 <p><img alt="Uptime Status" src="https://img.shields.io/uptimerobot/status/m782818639-f9a1f36b2acd090bbfaa4435.svg" />
 <img alt="Uptime last 7 days" src="https://img.shields.io/uptimerobot/ratio/7/m782818639-f9a1f36b2acd090bbfaa4435.svg" /></p>
 <p>The most important piece of software to check is of course HomeAssistant instance. The only thing exposed is <code>ping.txt</code> file inside <code>home-assitant/www/ping.txt</code>:</p>
-<div class="codehilite"><pre><span></span>  <span class="k">location</span> <span class="s">/ping.txt</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code>  <span class="k">location</span> <span class="s">/ping.txt</span> <span class="p">{</span>
     <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
     <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
     <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
     <span class="kn">proxy_pass</span> <span class="s">http://hass/local/ping.txt</span><span class="p">;</span>
   <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>If for some reason HomeAssistant container is down or the whole server just gone bananas, this file will not be served and response should <code>503 Bad Gateway</code>.</p>
@@ -740,22 +740,22 @@
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="http://macbury.ninja" class="md-footer-social__link fa fa-globe"></a>
+      <a href="http://macbury.ninja" target="_blank" rel="noopener" title="globe" class="md-footer-social__link fa fa-globe"></a>
     
-      <a href="https://github.com/macbury/SmartHouse/" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/macbury/SmartHouse/" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/macbury" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/macbury" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://www.linkedin.com/in/arkadiusz-buras-83041810/" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/arkadiusz-buras-83041810/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 
@@ -765,7 +765,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
